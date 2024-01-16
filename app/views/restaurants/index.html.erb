@@ -1,0 +1,10 @@
+
+<h1 class="mb-3">All restaurants</h1>
+<% @restaurants.each do |r| %>
+  <div class="d-flex mb-2 align-items-center justify-content-between w-25">
+    <%= r.name %>
+    <%= link_to "See details", restaurant_path(r), class: "btn btn-primary"%>
+  </div>
+<% end %>
+
+<%= link_to "Create new restaurant", new_restaurant_path, class: "btn btn-secondary mt-4" %>
